@@ -5,8 +5,7 @@ body {
 }
 
 .game-view {
-    background: rgb(14,200,48);
-    background: linear-gradient(0deg, rgba(14,200,48,1) 0%, rgba(12,154,21,0.8547794117647058) 49%, rgba(20,148,56,0.17690826330532217) 75%, rgba(4,145,21,1) 100%);
+    background: #12B431;   
     width: 100vw;
     height: 100vh;
 }
