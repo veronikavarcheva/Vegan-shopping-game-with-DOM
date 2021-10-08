@@ -1,11 +1,11 @@
 var state = {
     score: 0,
     gameOver: false,
-    // vegan : {
-    //     x: , 
-    //     y: ,
-    //     width: , 
-    //     height: , 
+    vegan : {
+        x: 100, 
+        y: 200,
+        width: 100, 
+        height: 200, 
 
-    // }
+    }
 }
