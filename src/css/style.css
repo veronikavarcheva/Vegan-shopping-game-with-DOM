@@ -5,7 +5,7 @@ body {
 }
 
 .game-view {
-    background: #12B431;   
+    background: rgb(13, 185, 45);  
     width: 100vw;
     height: 100vh;
 }
@@ -23,4 +23,8 @@ body {
     left: 50%;
     transform: translate(-50%);
     border-radius: 2em;
+}
+
+.hidden {
+    display: none;
 }
