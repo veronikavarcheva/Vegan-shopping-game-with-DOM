@@ -37,6 +37,11 @@ function gameLoop() {
 function modifyVeganPosition() {
     let vegan = state.vegan;
 
+    //apply gravity:
+    if(vegan.y + vegan.height < game.playScreen.offsetHeight) {
+        vegan.y += vegan.gravity;
+    }
+    //modify vegan position - up, down, left and right:
     if(state.keys.ArrowUp && vegan.y > 0) {
         vegan.y -= vegan.speed;
     }

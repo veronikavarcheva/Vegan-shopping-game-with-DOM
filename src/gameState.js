@@ -7,6 +7,7 @@ var state = {
         width: 100, 
         height: 200, 
         speed: 6,
+        gravity: 2
     }, 
     keys: {},
     
