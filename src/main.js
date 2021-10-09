@@ -18,15 +18,18 @@ function gameStart() {
 
 function gameLoop() {
     let { vegan } = state;
-    let { veganElement } = game;
+    let { veganElement, scoreScreen } = game;
 
     modifyVeganPosition();
     
     //render elements:
     veganElement.style.top = vegan.y + 'px';
     veganElement.style.left = vegan.x + 'px';
+    //apply score:
+    scoreScreen.textContent = state.score;
 
     if(!state.gameOver){
+        state.score++;
         window.requestAnimationFrame(gameLoop);
     } else {
         alert ('Game Over');

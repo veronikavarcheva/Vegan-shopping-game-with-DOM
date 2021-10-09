@@ -30,6 +30,12 @@ body {
     height: 100%;
 }
 
+.score-screen {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
 .vegan {
     position: absolute;
     background-image: url('/src/images/slim_vegan_man-removebg-preview.png');
