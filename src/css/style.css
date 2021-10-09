@@ -25,6 +25,11 @@ body {
     border-radius: 2em;
 }
 
+.play-screen {
+    width: 100%;
+    height: 100%;
+}
+
 .vegan {
     position: absolute;
     background-image: url('/src/images/slim_vegan_man-removebg-preview.png');

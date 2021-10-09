@@ -13,7 +13,7 @@ function gameFactory () {
         startScreen,
         scoreScreen, 
         playScreen, 
-
+        veganElement,
     }
 
     return factory;
