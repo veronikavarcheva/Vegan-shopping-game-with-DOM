@@ -45,9 +45,15 @@ function gameLoop(timestamp) {
         state.chickenLegStats.nextChickenLegCreation = timestamp + Math.random()*state.chickenLegStats.maxCreationInterval;
     }
 
-  
+    
 
-   
+
+    //spawn apples:
+    if(state.appleStats.nextAppleCreation < timestamp) {
+        game.createApple();
+        state.appleStats.nextAppleCreation = timestamp + Math.random()*state.appleStats.maxCreationAppleInterval;
+    }
+
     //render elements:
     veganElement.style.top = vegan.y + 'px';
     veganElement.style.left = vegan.x + 'px';

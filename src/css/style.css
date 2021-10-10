@@ -50,6 +50,12 @@ body {
     background-size: cover;
 }
 
+.apple {
+    position: absolute;
+    background-image: url('/src/images/apple.png');
+    background-size: cover;
+}
+
 .hidden {
     display: none;
 }

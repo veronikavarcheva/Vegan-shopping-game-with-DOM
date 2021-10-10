@@ -17,7 +17,13 @@ var state = {
         height: 50,
         speed: 3,
     },
-   
+   appleStats: {
+       nextAppleCreation: 0,
+       maxCreationAppleInterval: 1500,
+       width: 50, 
+       height: 50,
+       speed: 2,
+   }
     
 
 }

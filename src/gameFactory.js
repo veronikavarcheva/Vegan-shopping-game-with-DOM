@@ -1,6 +1,6 @@
 function gameFactory () {
 
-    let { vegan, chickenLegStats } = state;
+    let { vegan, chickenLegStats, appleStats } = state;
 
     let startScreen = document.querySelector('.start-screen');
     let scoreScreen = document.querySelector('.score-screen');
@@ -23,6 +23,16 @@ function gameFactory () {
             chickenLegElement.style.left = playScreen.offsetWidth - chickenLegStats.width + 'px';
             chickenLegElement.style.top = (playScreen.offsetHeight - chickenLegStats.height)*Math.random() + 'px';
             playScreen.appendChild(chickenLegElement);
+        },
+        createApple: () => {
+            let appleElement = document.createElement('div');
+            appleElement.classList.add('apple');
+            appleElement.style.width = appleStats.width + 'px';
+            appleElement.style.height = appleStats.height + 'px';
+
+            appleElement.style.left = playScreen.offsetWidth - appleStats.width + 'px';
+            appleElement.style.top = (playScreen.offsetHeight - appleStats.height)*Math.random() + 'px';
+            playScreen.appendChild(appleElement);
         }
     }
 
