@@ -4,8 +4,8 @@ var state = {
     vegan : {
         x: 100, 
         y: 200,
-        width: 100, 
-        height: 150, 
+        width: 90, 
+        height: 130, 
         speed: 6,
         gravity: 2
     }, 
@@ -23,11 +23,12 @@ var state = {
        width: 50, 
        height: 53,
        speed: 3,
+       score: 1000,
    },
    shoppingCartStats: {
        width: 90,
        height: 75, 
-       speed: 15,
+       speed: 10,
        nextShoppingCartCreation: 0,
        shoppingCartSpeed: 400,
    }

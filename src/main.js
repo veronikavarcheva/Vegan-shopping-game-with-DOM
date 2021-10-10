@@ -29,7 +29,24 @@ function gameLoop(timestamp) {
             state.shoppingCartStats.nextShoppingCartCreation = timestamp + state.shoppingCartStats.shoppingCartSpeed;   
         }
     }
+    //move shopping cart:
 
+    Array.from(document.getElementsByClassName('shopping-cart')).forEach(shoppingCart => {
+        let currentPosition = parseInt(shoppingCart.style.left);
+        if(currentPosition + state.shoppingCartStats.width < game.playScreen.offsetWidth) {
+            shoppingCart.style.left = currentPosition + state.shoppingCartStats.speed + 'px';
+        } else {
+            shoppingCart.remove();
+        }
+
+        Array.from(document.getElementsByClassName('apple')).forEach(apple => {
+            if(hasCollision(shoppingCart, apple)) {
+                apple.remove();
+                shoppingCart.remove();
+                state.score += state.appleStats.score;
+            }
+        });
+    });
 
     //move chicken legs:
     Array.from(document.getElementsByClassName('chicken-leg')).forEach(x => {
