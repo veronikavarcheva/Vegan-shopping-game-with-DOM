@@ -16,17 +16,24 @@ function gameStart() {
 
 }
 
-function gameLoop() {
+function gameLoop(timestamp) {
     let { vegan } = state;
     let { veganElement, scoreScreen } = game;
-
+    // console.log(timestamp);
+    
     modifyVeganPosition();
     
+    //spawn chicken legs:
+    if(state.chickenLegStats.nextChickenLegCreation < timestamp){
+        game.createChickenLeg();
+        state.chickenLegStats.nextChickenLegCreation = timestamp + Math.random()*state.chickenLegStats.maxCreationInterval;
+    }
+   
     //render elements:
     veganElement.style.top = vegan.y + 'px';
     veganElement.style.left = vegan.x + 'px';
     //apply score:
-    scoreScreen.textContent = state.score;
+    scoreScreen.textContent = state.score + ' pts.';
 
     if(!state.gameOver){
         state.score++;

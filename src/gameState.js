@@ -10,7 +10,13 @@ var state = {
         gravity: 2
     }, 
     keys: {},
-    
+    chickenLegStats: {
+        nextChickenLegCreation: 0,
+        maxCreationInterval: 1500,
+        width: 50,
+        height: 50,
+       
+    }
     
 
 }

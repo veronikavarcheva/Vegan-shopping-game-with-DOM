@@ -44,6 +44,12 @@ body {
     background-size: cover;
 }
 
+.chickenLeg {
+    position: absolute;
+    background-image: url('/src/images/chicken_leg-removebg-preview.png');
+    background-size: cover;
+}
+
 .hidden {
     display: none;
 }
