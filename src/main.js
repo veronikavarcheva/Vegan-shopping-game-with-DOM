@@ -32,6 +32,11 @@ function gameLoop(timestamp) {
         } else {
             x.remove();
         }
+
+        //check for collision:
+        if(hasCollision(veganElement, x)) {
+            state.gameOver = true;
+        }
     });
 
     //spawn chicken legs:
@@ -39,6 +44,9 @@ function gameLoop(timestamp) {
         game.createChickenLeg();
         state.chickenLegStats.nextChickenLegCreation = timestamp + Math.random()*state.chickenLegStats.maxCreationInterval;
     }
+
+  
+
    
     //render elements:
     veganElement.style.top = vegan.y + 'px';
@@ -50,7 +58,7 @@ function gameLoop(timestamp) {
         state.score++;
         window.requestAnimationFrame(gameLoop);
     } else {
-        alert ('Game Over');
+        alert ('Game Over' + ' ' + state.score + 'pts.');
     }
     
 }
@@ -79,6 +87,15 @@ function modifyVeganPosition() {
         vegan.x += vegan.speed;
     }
 }
+
+function hasCollision(firstElement, secondElement) {
+    let firstRect = firstElement.getBoundingClientRect();
+    let secondRect = secondElement.getBoundingClientRect();
+    // console.log(firstRect);
+    
+    return (!(firstRect.top > secondRect.bottom ||  firstRect.bottom < secondRect.top || firstRect.right < secondRect.left || firstRect.left > secondRect.right));
+}
+
 
 //key handlers:
 

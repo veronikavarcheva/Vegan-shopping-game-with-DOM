@@ -39,8 +39,8 @@ body {
 .vegan {
     position: absolute;
     background-image: url('/src/images/slim_vegan_man-removebg-preview.png');
-    width: 120px;
-    height: 220px;
+    width: 100px;
+    height: 190px;
     background-size: cover;
 }
 
