@@ -44,7 +44,7 @@ body {
     background-size: cover;
 }
 
-.chickenLeg {
+.chicken-leg {
     position: absolute;
     background-image: url('/src/images/chicken_leg-removebg-preview.png');
     background-size: cover;
@@ -53,6 +53,13 @@ body {
 .apple {
     position: absolute;
     background-image: url('/src/images/apple.png');
+    background-size: cover;
+}
+.shopping-cart {
+    position: absolute;
+    background-image: url('/src/images/shopping_cart-removebg-preview.png');
+    width: 100px;
+    height: 90px;
     background-size: cover;
 }
 

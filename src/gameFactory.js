@@ -1,6 +1,6 @@
 function gameFactory () {
 
-    let { vegan, chickenLegStats, appleStats } = state;
+    let { vegan, chickenLegStats, appleStats, shoppingCartStats } = state;
 
     let startScreen = document.querySelector('.start-screen');
     let scoreScreen = document.querySelector('.score-screen');
@@ -16,7 +16,7 @@ function gameFactory () {
         veganElement,
         createChickenLeg: () => {
             let chickenLegElement = document.createElement('div');
-            chickenLegElement.classList.add('chickenLeg');
+            chickenLegElement.classList.add('chicken-leg');
             chickenLegElement.style.width = chickenLegStats.width + 'px';
             chickenLegElement.style.height = chickenLegStats.height + 'px';
 
@@ -33,6 +33,19 @@ function gameFactory () {
             appleElement.style.left = playScreen.offsetWidth - appleStats.width + 'px';
             appleElement.style.top = (playScreen.offsetHeight - appleStats.height)*Math.random() + 'px';
             playScreen.appendChild(appleElement);
+        },
+        createShoppingCart: () => {
+            let shoppingCartElement = document.createElement('div');
+            
+            shoppingCartElement.classList.add('shopping-cart');
+            shoppingCartElement.style.width = shoppingCartStats.width + 'px';
+            shoppingCartElement.style.height = shoppingCartStats.height + 'px';
+
+            shoppingCartElement.style.left = vegan.x + shoppingCartStats.width + 'px';
+            shoppingCartElement.style.top = vegan.y + shoppingCartStats.height + 'px';
+
+            playScreen.appendChild(shoppingCartElement);
+
         }
     }
 

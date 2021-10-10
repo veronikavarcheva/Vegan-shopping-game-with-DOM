@@ -22,9 +22,17 @@ function gameLoop(timestamp) {
     // console.log(timestamp);
     
     modifyVeganPosition();
-    
+
+    if(state.keys.Space) {
+        if(state.shoppingCartStats.nextShoppingCartCreation < timestamp) {
+            game.createShoppingCart();
+            state.shoppingCartStats.nextShoppingCartCreation = timestamp + state.shoppingCartStats.shoppingCartSpeed;   
+        }
+    }
+
+
     //move chicken legs:
-    Array.from(document.getElementsByClassName('chickenLeg')).forEach(x => {
+    Array.from(document.getElementsByClassName('chicken-leg')).forEach(x => {
         let currentPosition = parseInt(x.style.left);
 
         if(currentPosition > 0) {
@@ -45,7 +53,16 @@ function gameLoop(timestamp) {
         state.chickenLegStats.nextChickenLegCreation = timestamp + Math.random()*state.chickenLegStats.maxCreationInterval;
     }
 
-    
+    //move apples:
+    Array.from(document.getElementsByClassName('apple')).forEach(x => {
+        let currentPosition = parseInt(x.style.left);
+
+        if(currentPosition > 0) {
+            x.style.left = currentPosition - state.appleStats.speed + 'px';
+        } else {
+            x.remove();
+        }
+    });
 
 
     //spawn apples:
@@ -99,7 +116,7 @@ function hasCollision(firstElement, secondElement) {
     let secondRect = secondElement.getBoundingClientRect();
     // console.log(firstRect);
     
-    return (!(firstRect.top > secondRect.bottom ||  firstRect.bottom < secondRect.top || firstRect.right < secondRect.left || firstRect.left > secondRect.right));
+    return (!(firstRect.top > secondRect.bottom || firstRect.bottom < secondRect.top || firstRect.right < secondRect.left || firstRect.left > secondRect.right));
 }
 
 

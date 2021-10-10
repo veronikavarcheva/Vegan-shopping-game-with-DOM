@@ -12,17 +12,24 @@ var state = {
     keys: {},
     chickenLegStats: {
         nextChickenLegCreation: 0,
-        maxCreationInterval: 2500,
+        maxCreationInterval: 3500,
         width: 60,
         height: 50,
         speed: 3,
     },
    appleStats: {
        nextAppleCreation: 0,
-       maxCreationAppleInterval: 1500,
+       maxCreationAppleInterval: 2500,
        width: 50, 
-       height: 50,
-       speed: 2,
+       height: 53,
+       speed: 3,
+   },
+   shoppingCartStats: {
+       width: 90,
+       height: 75, 
+       speed: 15,
+       nextShoppingCartCreation: 0,
+       shoppingCartSpeed: 400,
    }
     
 
