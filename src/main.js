@@ -23,6 +23,17 @@ function gameLoop(timestamp) {
     
     modifyVeganPosition();
     
+    //move chicken legs:
+    Array.from(document.getElementsByClassName('chickenLeg')).forEach(x => {
+        let currentPosition = parseInt(x.style.left);
+
+        if(currentPosition > 0) {
+            x.style.left = currentPosition - state.chickenLegStats.speed + 'px';
+        } else {
+            x.remove();
+        }
+    });
+
     //spawn chicken legs:
     if(state.chickenLegStats.nextChickenLegCreation < timestamp){
         game.createChickenLeg();

@@ -13,9 +13,9 @@ var state = {
     chickenLegStats: {
         nextChickenLegCreation: 0,
         maxCreationInterval: 1500,
-        width: 50,
+        width: 60,
         height: 50,
-       
+        speed: 3,
     }
     
 
