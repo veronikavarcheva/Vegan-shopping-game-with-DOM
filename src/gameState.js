@@ -16,6 +16,7 @@ var state = {
         width: 60,
         height: 50,
         speed: 3,
+        score: 1500, 
     },
    appleStats: {
        nextAppleCreation: 0,

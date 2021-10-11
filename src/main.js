@@ -10,6 +10,7 @@ document.addEventListener('keyup', onKeyUp);
 function gameStart() {
     game.startScreen.classList.add('hidden');
     game.playScreen.classList.remove('hidden');
+    game.scoreScreen.classList.remove('hidden');
 
     //game infinite loop :
     window.requestAnimationFrame(gameLoop);
@@ -44,6 +45,19 @@ function gameLoop(timestamp) {
                 apple.remove();
                 shoppingCart.remove();
                 state.score += state.appleStats.score;
+            }
+        });
+
+        Array.from(document.getElementsByClassName('chicken-leg')).forEach(chickenLeg => {
+            if(hasCollision(shoppingCart, chickenLeg)) {
+                chickenLeg.remove();
+                shoppingCart.remove();
+                state.score -= state.chickenLegStats.score;
+                if( state.score < 0) {
+                    state.score = 0;
+                    state.gameOver = true;
+                    
+                }
             }
         });
     });
@@ -94,12 +108,13 @@ function gameLoop(timestamp) {
     //apply score:
     scoreScreen.textContent = state.score + ' pts.';
 
-    if(!state.gameOver){
+    if(!state.gameOver ){
         state.score++;
         window.requestAnimationFrame(gameLoop);
     } else {
         alert ('Game Over' + ' ' + state.score + 'pts.');
     }
+    
     
 }
 
