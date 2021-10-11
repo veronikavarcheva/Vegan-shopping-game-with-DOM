@@ -32,12 +32,23 @@ body {
   border: none;
 }
 
+.start-screen > article {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 45%;
+}
+
 .start-screen img {
   padding: 300px;
-  position: absolute;
-  width: 500px;
+  position: absolute;  
   left: 50%;
   transform: translate(-50%);
+  bottom: -15%;
+  width: 300px;
+  height: 225px;
 }
 
 .play-screen {
