@@ -84,6 +84,9 @@ function gameLoop(timestamp) {
         state.chickenLegStats.nextChickenLegCreation = timestamp + Math.random() * state.chickenLegStats.maxCreationInterval;
     }
 
+    // increase chicken legs speed:
+    state.chickenLegStats.speed += 0.001;
+
     //move apples:
     Array.from(document.getElementsByClassName('apple')).forEach(x => {
         let currentPosition = parseInt(x.style.left);
