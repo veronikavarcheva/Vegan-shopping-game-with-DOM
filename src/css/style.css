@@ -1,84 +1,98 @@
 body {
-    margin: 0;
-    font-size: 30px;
-    font-family: 'consolas';
+  margin: 0;
+  font-size: 30px;
+  font-family: "consolas";
 }
 
 .game-view {
-    background: rgb(13, 185, 45);  
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
+  background: rgb(13, 185, 45);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
 }
 
 .start-screen {
-    width: 100%;
-    height: 100%;
-    margin: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .start-screen > button {
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
-    margin-top: 100px;
-    background-color: lightcoral;
-    font-weight: bold;
-    position: absolute;
-    width: 500px;
-    left: 50%;
-    transform: translate(-50%);
-    border-radius: 2em;
-    border: none;
-}
- .start-screen img{
-    padding: 300px;
-    position: absolute;
-    width: 500px;
-    left: 50%;
-    transform: translate(-50%);
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 100px;
+  background-color: lightcoral;
+  font-weight: bold;
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 2em;
+  border: none;
 }
 
- 
+.start-screen img {
+  padding: 300px;
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  transform: translate(-50%);
+}
 
 .play-screen {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .score-screen {
-    background-color: black;
-    color: white;
-    text-align: center;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.game-over-screen {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 100px;
+  background-color: #cf0f0f;
+  font-weight: bold;
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 2em;
 }
 
 .vegan {
-    position: absolute;
-    background-image: url('/src/images/slim_vegan_man-removebg-preview.png');
-    width: 90px;
-    height: 170px;
-    background-size: cover;
+  position: absolute;
+  background-image: url("/src/images/slim_vegan_man-removebg-preview.png");
+  width: 90px;
+  height: 170px;
+  background-size: cover;
 }
 
 .chicken-leg {
-    position: absolute;
-    background-image: url('/src/images/chicken_leg-removebg-preview.png');
-    background-size: cover;
+  position: absolute;
+  background-image: url("/src/images/chicken_leg-removebg-preview.png");
+  background-size: cover;
 }
 
 .apple {
-    position: absolute;
-    background-image: url('/src/images/apple.png');
-    background-size: cover;
+  position: absolute;
+  background-image: url("/src/images/apple.png");
+  background-size: cover;
 }
+
 .shopping-cart {
-    position: absolute;
-    background-image: url('/src/images/shopping_cart-removebg-preview.png');
-    width: 100px;
-    height: 90px;
-    background-size: cover;
+  position: absolute;
+  background-image: url("/src/images/shopping_cart-removebg-preview.png");
+  width: 100px;
+  height: 90px;
+  background-size: cover;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
